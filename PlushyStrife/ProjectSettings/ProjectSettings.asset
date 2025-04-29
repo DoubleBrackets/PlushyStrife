@@ -326,7 +326,7 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  cameraUsageDescription: 
+  cameraUsageDescription: Webcam used to record Tool of Violence (for leaderboard)
   locationUsageDescription: 
   microphoneUsageDescription: 
   bluetoothUsageDescription: 
