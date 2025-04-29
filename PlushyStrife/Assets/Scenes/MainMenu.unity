@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SLAM ANYWHERE TO START
+  m_text: CHOOSE YOUR TOOL AND SLAM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a456fbe16d8687841b6166c702260225, type: 2}
   m_sharedMaterial: {fileID: 1670441781135268882, guid: a456fbe16d8687841b6166c702260225, type: 2}
