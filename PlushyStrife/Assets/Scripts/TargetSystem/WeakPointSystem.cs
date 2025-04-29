@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
@@ -11,6 +13,12 @@ namespace TargetSystem
 
         [SerializeField]
         private List<WeakPoint> weakPoints;
+
+        [SerializeField]
+        private float newWeakPointDelay;
+
+        [SerializeField]
+        private UnityEvent onWeakPointHit;
 
         private WeakPoint currentWeakPoint;
 
@@ -37,10 +45,18 @@ namespace TargetSystem
 
         private void OnWeakPointHit()
         {
+            onWeakPointHit?.Invoke();
+
             currentWeakPoint.OnHit.RemoveListener(OnWeakPointHit);
             currentWeakPoint = null;
 
             // Choose a new weak point
+            QueueNewWeakPoint().Forget();
+        }
+
+        private async UniTaskVoid QueueNewWeakPoint()
+        {
+            await UniTask.Delay((int)(newWeakPointDelay * 1000));
             ChooseNewWeakPoint();
         }
 

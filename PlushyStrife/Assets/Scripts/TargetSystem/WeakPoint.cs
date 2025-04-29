@@ -36,6 +36,11 @@ namespace TargetSystem
             OnHit?.Invoke();
         }
 
+        public void DoHitEffect()
+        {
+            OnHit?.Invoke();
+        }
+
         [ContextMenu("Set Vuln")]
         public void SetVulnerable()
         {

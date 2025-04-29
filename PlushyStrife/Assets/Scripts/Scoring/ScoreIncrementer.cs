@@ -11,6 +11,11 @@ namespace Scoring
 
         public void IncrementScore()
         {
+            if (ScoreManager.Instance == null)
+            {
+                return;
+            }
+
             ScoreManager.Instance.AddScore(1);
         }
     }
