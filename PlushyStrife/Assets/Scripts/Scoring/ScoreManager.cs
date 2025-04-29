@@ -1,12 +1,17 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScoreManager : MonoBehaviour
 {
+    public static int CurrentScore;
+
     [Header("Depends")]
 
     [SerializeField]
     private TMP_Text scoreText;
+
+    public UnityEvent OnScoreChanged;
 
     public static ScoreManager Instance { get; private set; }
 
@@ -23,6 +28,7 @@ public class ScoreManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        CurrentScore = 0;
         UpdateScoreText();
     }
 
@@ -30,6 +36,8 @@ public class ScoreManager : MonoBehaviour
     {
         score += amount;
         UpdateScoreText();
+        OnScoreChanged?.Invoke();
+        CurrentScore = score;
     }
 
     private void UpdateScoreText()
