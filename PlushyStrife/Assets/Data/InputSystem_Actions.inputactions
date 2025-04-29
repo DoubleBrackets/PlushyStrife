@@ -6,167 +6,66 @@
             "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
             "actions": [
                 {
-                    "name": "P1Move",
-                    "type": "Value",
-                    "id": "ddda37d5-371c-486b-b326-931269905a89",
-                    "expectedControlType": "Vector2",
+                    "name": "HitUpper",
+                    "type": "Button",
+                    "id": "63f19737-a84d-49fb-9053-992003858c4e",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
-                    "name": "P2Move",
-                    "type": "Value",
-                    "id": "d77bcd1c-fa34-4bd9-b934-e5bb280db5e3",
-                    "expectedControlType": "Vector2",
+                    "name": "HitMiddle",
+                    "type": "Button",
+                    "id": "27c40aaa-62eb-4ec9-98fd-f3efe8cb23e2",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HitBottom",
+                    "type": "Button",
+                    "id": "1d268f8f-ef77-4959-8747-ae1881ee182d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "5eed58fe-eee3-4147-bd6d-ea408aa680a4",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P1Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "2D Vector",
-                    "id": "54f7a98e-61cb-4100-80f9-f0f437cc9150",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P1Move",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "cb4e0cf7-c569-425a-b8dc-25f3db037d56",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P1Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "f4372978-8df7-492b-85de-8565eae9564e",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P1Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "b7fe10f4-0c04-4a75-9ead-18eabaf5a584",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P1Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "db7d83ba-0ce9-40a4-b828-1f2f05a028b7",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P1Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "d28124c2-a35b-49a3-9a50-4928872c5e89",
-                    "path": "<HID::Microntek              USB Joystick          >/stick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P1Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "18618c0d-fecb-4703-a61b-8c7deff302b1",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P2Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "2D Vector",
-                    "id": "6570e824-3cd2-4892-9318-9a1002ca0c7e",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P2Move",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "b5b8c055-6121-410c-a20e-fc4c3e48d4c5",
+                    "id": "be720716-ef92-494d-aaf8-a6cca6ed7681",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "P2Move",
+                    "action": "HitUpper",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "down",
-                    "id": "62fc1c20-429c-463b-b974-307aa58ebe7b",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P2Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "c6cf0eab-f07e-40d0-88d1-8fb0345cf61a",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P2Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "43ff9f5e-28c9-4993-a95a-02e0756771e3",
+                    "name": "",
+                    "id": "d8094719-a4e0-4ff4-bb66-47de8f564483",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "P2Move",
+                    "action": "HitMiddle",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "934e5d7e-668b-4ffb-b6e8-38c56d8ce64a",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HitBottom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
