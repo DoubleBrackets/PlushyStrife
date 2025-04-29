@@ -1,4 +1,5 @@
 using System;
+using Capture;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -8,6 +9,12 @@ namespace ResultMenu
 {
     public class FinalScoreDisplay : MonoBehaviour
     {
+        [SerializeField]
+        private SaveDataSO saveData;
+
+        [SerializeField]
+        private WebCam webCam;
+
         [SerializeField]
         private TMP_Text finalScoreText;
 
@@ -33,6 +40,8 @@ namespace ResultMenu
 
         private void Start()
         {
+            Resources.UnloadUnusedAssets();
+
             IncrementScore().Forget();
         }
 
@@ -87,6 +96,8 @@ namespace ResultMenu
             onSubmitted?.Invoke();
 
             await UniTask.Delay(TimeSpan.FromSeconds(1.5f));
+
+            saveData.AddLeaderboardEntry(name, ScoreManager.CurrentScore, weapon, webCam.LastCapture);
 
             onFinished?.Invoke();
         }

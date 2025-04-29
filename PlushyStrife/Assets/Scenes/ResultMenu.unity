@@ -959,7 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28ed71e2491743448389b455cce262d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Gameplay
+  sceneName: HighScores
 --- !u!4 &559459622
 Transform:
   m_ObjectHideFlags: 0
@@ -987,6 +987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bce14f8a0500f94c8d9c8e74c0feeb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveData: {fileID: 11400000, guid: 3adafe1a463b9a5409f484f5f3268227, type: 2}
+  webCam: {fileID: 1660394950}
   finalScoreText: {fileID: 168881268}
   onIncrementScore:
     m_PersistentCalls:
@@ -1027,8 +1029,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 589560960}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+      - m_Target: {fileID: 1346068675}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -1039,9 +1041,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1346068675}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 589560960}
+        m_TargetAssemblyTypeName: TargetSystem.WeakPoint, Assembly-CSharp
+        m_MethodName: DoHitEffect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1212,11 +1214,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 077776e23e6332443a2fcd5c32537667, type: 3}
---- !u!198 &589560960 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3555272534432200143, guid: 077776e23e6332443a2fcd5c32537667, type: 3}
+--- !u!114 &589560960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8428385463157254557, guid: 077776e23e6332443a2fcd5c32537667, type: 3}
   m_PrefabInstance: {fileID: 589560959}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf91d72277de84042a83c7ce3644d7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &614460150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,6 +1379,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &625977224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 625977225}
+  m_Layer: 0
+  m_Name: ==Audio==
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &625977225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625977224}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7951286, y: -0.32683927, z: 2230.6472}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1709,7 +1748,7 @@ GameObject:
   - component: {fileID: 1346068676}
   - component: {fileID: 1346068675}
   m_Layer: 0
-  m_Name: Audio
+  m_Name: MeatlPipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1727,7 +1766,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7340a625aea8a5c4d8d34662b2002718, type: 3}
   m_Resource: {fileID: 8300000, guid: 7340a625aea8a5c4d8d34662b2002718, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2603,4 +2642,5 @@ SceneRoots:
   - {fileID: 1090728031}
   - {fileID: 589560959}
   - {fileID: 654879932}
+  - {fileID: 625977225}
   - {fileID: 1346068676}
