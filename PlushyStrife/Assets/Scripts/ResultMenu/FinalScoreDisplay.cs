@@ -84,6 +84,7 @@ namespace ResultMenu
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(weapon))
             {
                 Debug.Log("Name or weapon is empty");
+                return;
             }
 
             if (submitted)
