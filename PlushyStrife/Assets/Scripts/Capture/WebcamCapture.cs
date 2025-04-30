@@ -44,6 +44,15 @@ namespace Capture
             InitializeCamera();
         }
 
+        private void OnDestroy()
+        {
+            if (webcamTexture != null)
+            {
+                webcamTexture.Stop();
+                webcamTexture = null;
+            }
+        }
+
         private bool CheckPermissionAndRaiseCallbackIfGranted(UserAuthorization authenticationType,
             Action authenticationGrantedAction)
         {
