@@ -2570,7 +2570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038c21e84920f6046acc794481a64a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _duration: 15
+  _duration: 20
   _countdownDuration: 3
   OnEnterCountdown:
     m_PersistentCalls:
